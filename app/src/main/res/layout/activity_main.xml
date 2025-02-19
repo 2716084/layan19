@@ -5,42 +5,51 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="UseSwitchCompatOrMaterialXml">
 
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="268dp"
         android:layout_height="26dp"
         android:layout_marginStart="202dp"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="180dp"
         android:layout_marginEnd="168dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.519"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:max="200"
+        android:progress="50"
+        android:min="0"
+        />
 
     <Switch
         android:id="@+id/switch1"
-        android:layout_width="136dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="86dp"
-        android:layout_marginEnd="151dp"
-        android:text="Switch"
+        android:layout_width="168dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="150dp"
+        android:text="change pic"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.79"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="157dp"
-        android:layout_marginEnd="126dp"
-        android:layout_marginBottom="176dp"
+        android:layout_width="119dp"
+        android:layout_height="132dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginBottom="142dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@drawable/happy" />
+        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        app:srcCompat="@drawable/happy" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -15,17 +16,31 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, SeekBar.OnSeekBarChangeListener , CompoundButton.OnCheckedChangeListener {
-ImageView image1;
-    @Override
+ImageView image1 ;
+ImageView image2;;
+private  SeekBar sk;
+private int seekBarProgress;
+private Switch sw;
+
+@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
     }
 
+    @SuppressLint("CutPasteId")
     private void initViews() {
         image1=findViewById(R.id.imageView);
+        image2=findViewById(R.id.imageView);
+        sw=findViewById(R.id.switch1);
+        sk=findViewById(R.id.seekBar);
+        sw.setOnCheckedChangeListener(this);
+
+
     }
+
+
 
     @Override
     public void onClick(View v) {
@@ -34,6 +49,9 @@ ImageView image1;
 
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+    sk=progress;
+
+
 
     }
 
@@ -55,7 +73,7 @@ ImageView image1;
             image1.setImageResource(R.drawable.sad);
         }
         else {
-            image1.setImageResource(R.drawable.sad);
+            image1.setImageResource(R.drawable.happy);
         }
     }
 }
