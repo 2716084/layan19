@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     tools:ignore="UseSwitchCompatOrMaterialXml">
-.
+
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="268dp"
