@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         sw.setOnCheckedChangeListener(this);
         sk.setOnSeekBarChangeListener(this);
     }
-    .
+
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
